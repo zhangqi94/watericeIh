@@ -27,23 +27,9 @@ from source.potentialmace_cueq import initialize_mace_model
 # Inputs
 xyz_file = "/home/zq/zqcodeml/watericeIh_data/dft_data/data_xyz_260201/watericeIh_test.xyz"
 
-mace_model_path = "/home/zq/zqcodeml/watericeIh-mc-master/source/potential/macemodel260201/modles/mace_iceIh_128x0e128x1o_r4.5_float32_seed146_cueq.model"
+mace_model_path = "/home/zq/zqcodeml/watericeIh-mc-github/source/potential/macemodel260201/mace_iceIh_128x0e128x1o_r4.5_float32_seed146_cueq.model"
 out_npz = "/home/zq/zqcodeml/watericeIh_data/dft_data/data_xyz_260201/mace_iceIh_128x0e128x1o_r4.5_float32_seed146_testset_gpu_v2.npz"
 create_neighborlist_device = "cpu"
-
-# mace_model_path = "/home/zq/zqcodeml/watericeIh-mc-master/source/potential/macemodel260201/modles/mace_iceIh_128x0e128x1o_r4.0_float32_seed144.model"
-# out_npz = "/home/zq/zqcodeml/watericeIh_data/dft_data/data_xyz_260201/mace_iceIh_128x0e128x1o_r4.0_float32_seed144_testset_cpu_v2.npz"
-# create_neighborlist_device = "cpu"
-
-# mace_model_path = "/home/zq/zqcodeml/watericeIh-mc-master/source/potential/macemodel251125_/mace_iceIh_128x0e128x1o_r4.5_float32_seed144_cueq.model"
-# out_npz = "/home/zq/zqcodeml/watericeIh_data/dft_data/data_xyz_260201/mace_iceIh_128x0e128x1o_r4.5_float32_seed144_testset_cpu_v2.npz"
-# create_neighborlist_device = "cpu"
-
-
-
-# mace_model_path = "/home/zq/zqcodeml/watericeIh-mc-master/source/potential/macemodel260201/modles/mace_iceIh_128x0e128x1o_r4.5_float32_seed146_cueq.model"
-# out_npz = "/home/zq/zqcodeml/watericeIh_data/dft_data/data_xyz_260201/mace_iceIh_128x0e128x1o_r4.5_float32_seed146_testset_gpu_v2.npz"
-# create_neighborlist_device = "gpu"
 
 # out_npz = "/home/zq/zqcodeml/watericeIh_data/dft_data/data_xyz_251112/mace_pred_watericeIh_testset_gpu_v2.npz"
 # Create inference callable (DO NOT redefine mace_inference manually)

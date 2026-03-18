@@ -1,6 +1,6 @@
 # Ab initio simulation of the first-order proton-ordering transition in water ice
 
-This repository accompanies the arXiv paper [*Ab initio simulation of the first-order proton-ordering transition in water ice*](https://arxiv.org/abs/2603.09247). It contains the code for ab initio-accurate equilibrium sampling of proton ordering in water ice, combining a MACE potential trained on DFT data with loop updates that preserve the ice rules and continuous atomic-coordinate Monte Carlo updates. The repository includes the full workflow: structure preparation, DFT data extraction, MACE training and validation, finite-temperature Monte Carlo runs, and post-processing.
+This repository accompanies the paper [*Ab initio simulation of the first-order proton-ordering transition in water ice*](https://arxiv.org/abs/2603.09247). It contains the code for ab initio-accurate equilibrium sampling of proton ordering in water ice, combining a MACE potential trained on DFT data with loop updates that preserve the ice rules and continuous atomic-coordinate Monte Carlo updates. The repository includes the full workflow: structure preparation, DFT data extraction, MACE training and validation, finite-temperature Monte Carlo runs, and post-processing.
 
 ## What is in this repository
 
@@ -20,16 +20,14 @@ In addition, the repository root contains the main executable scripts:
 
 The codebase was developed with Python packages listed in `requirements.txt`. Core packages used throughout the workflow include:
 
-- `torch==2.8.0+cu128`
-- `ase==3.26.0`
 - `numpy==1.26.4`
+- `ase==3.26.0`
+- `torch==2.8.0+cu128`
 - `mace-torch==0.3.14` ([MACE GitHub](https://github.com/acesuit/mace))
 - `e3nn==0.4.4`
 - `cuequivariance==0.6.1`
 - `matscipy==1.1.1`
 - `scipy==1.16.2`
-- `matplotlib==3.10.6`
-- `pandas==2.3.2`
 
 For the full software stack, see `requirements.txt`.
 
@@ -144,8 +142,8 @@ python main_mcmix.py \
 Outputs are written using the `save_file_path` prefix and typically include:
 
 - a text log for energy and other observables
-- a final snapshot JSON
-- an optional multi-frame XYZ trajectory, which can be very large for long runs
+- a snapshot JSON file
+- an optional multi-frame XYZ trajectory, which can be very large for long runs !!!
 
 ### Run loop-only Monte Carlo
 

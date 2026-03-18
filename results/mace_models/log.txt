@@ -1,0 +1,29 @@
+Input frames : 45029
+Unique sizes : 5  (including unknown=0 if present)
+Train ratio  : 0.900000
+Train frames : 40525
+Test frames  : 4504
+Shuffle within size: True (seed=20260131)
+Wrote train: /home/zq/zqcodeml/mace-train-iceIh/data_xyz_260131/watericeIh_train.xyz
+Wrote test : /home/zq/zqcodeml/mace-train-iceIh/data_xyz_260131/watericeIh_test.xyz
+
+[TOTAL] size counts (H2O -> nframes):
+       16H2O : 6000
+       32H2O : 9000
+       64H2O : 7000
+       96H2O : 13123
+      128H2O : 9906
+
+[TRAIN] size counts (H2O -> nframes):
+       16H2O : 5400
+       32H2O : 8100
+       64H2O : 6300
+       96H2O : 11810
+      128H2O : 8915
+
+[TEST] size counts (H2O -> nframes):
+       16H2O : 600
+       32H2O : 900
+       64H2O : 700
+       96H2O : 1313
+      128H2O : 991

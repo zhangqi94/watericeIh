@@ -1,0 +1,7 @@
+*.sh
+*.out
+*.pyc
+*.pdf
+*.DS_Store 
+*.slurm
+__pycache__

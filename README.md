@@ -145,20 +145,6 @@ Outputs are written using the `save_file_path` prefix and typically include:
 - a snapshot JSON file
 - an optional multi-frame XYZ trajectory, which can be very large for long runs !!!
 
-### Run loop-only Monte Carlo
-
-Example:
-
-```bash
-python main_mcloop.py \
-  --init_stru_path source/structure/initstru/sc_222_n_64.json \
-  --save_file_path /tmp/sc_222_n_64_T_100_loop \
-  --mace_model_path source/potential/macemodel260201/mace_iceIh_128x0e128x1o_r4.5_float32_seed146_cueq.model \
-  --target_temperature_K 100 \
-  --num_blocks 1000 \
-  --num_loop_steps 20
-```
-
 ### Submit production jobs on Slurm
 
 The `run/submitjob_mcmix_t02_nv_n128.py` and `run/submitjob_mcmix_t02_nv_n360.py` scripts are the practical production wrappers. They define:

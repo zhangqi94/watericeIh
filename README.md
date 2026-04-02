@@ -23,7 +23,7 @@ The codebase was developed with Python packages listed in `requirements.txt`. Co
 - `numpy==1.26.4`
 - `ase==3.26.0`
 - `torch==2.8.0+cu128`
-- `mace-torch==0.3.14` ([MACE GitHub](https://github.com/acesuit/mace))
+- `mace-torch==0.3.14` ([MACE GitHub](https://github.com/ACEsuit/mace)): do not install it with `pip install mace-torch==0.3.14`; use the GitHub version instead: `pip install git+https://github.com/ACEsuit/mace.git@v0.3.14`
 - `e3nn==0.4.4`
 - `cuequivariance==0.6.1`
 - `matscipy==1.1.1`
@@ -64,7 +64,7 @@ The `dft/` directory contains the VASP input files and MACE training scripts use
 - `mace-train-script/submitjob_mace314.py`: Slurm script generator for MACE training
 - `rmse_calculate_macepotential.py` and `rmse_plot_macevalues.py`: scripts for MACE validation against DFT reference data
 
-The full DFT training dataset is too large to be included in this repository.
+The full DFT training dataset is too large to be included in this repository. If needed, please contact the authors to request access.
 
 ### 3. Monte Carlo production runs
 
@@ -72,7 +72,6 @@ The `run/` directory contains cluster-specific batch launchers:
 
 - `submitjob_mcmix_t02_nv_n128.py`
 - `submitjob_mcmix_t02_nv_n360.py`
-- `runtools.py`
 
 These scripts generate Slurm jobs that:
 
@@ -81,12 +80,13 @@ These scripts generate Slurm jobs that:
 - run `main_mcmix.py` inside an Apptainer/Singularity container
 - save per-run `.json` outputs and `.log` files
 
+Update the hard-coded path settings in these scripts to match your local machine or cluster environment before use.
+
 ### 4. Merging and analysis of Monte Carlo logs
 
 The `analysis/` directory contains post-processing helpers:
 
 - `anatools.py`: shared analysis routines for reading logs, trimming burn-in, computing observables, and rebinning
-- `anacolors.py`: plotting color definitions
 - `save_mc_merged_data.py`: merges multi-run outputs and exports summary CSV tables
 
 The current analysis script is configured to:

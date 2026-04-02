@@ -16,8 +16,8 @@ mem_gb = 32
 run_ids = [f"{i:04d}" for i in range(1, 9)]
 temperatures = [20, 50, 55, 60, 65, 70, 72.5, 75, 77.5, 80, 82.5, 85, 87.5, 90, 92.5, 95, 97.5, 100, 105, 110, 120, 130, 140, 150, 200]
 
-init_stru_path = "source/structure/initstru/sc_222_n_64.json"
-init_stru_path = "source/structure/initstru/sc_322_n_96.json"
+# init_stru_path = "source/structure/initstru/sc_222_n_64.json"
+# init_stru_path = "source/structure/initstru/sc_322_n_96.json"
 init_stru_path = "source/structure/initstru/sc_422_n_128.json"
 mala_width_ref = 0.0100
 cell_width_ref = 0.0010
